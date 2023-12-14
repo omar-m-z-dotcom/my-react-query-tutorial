@@ -1,0 +1,6 @@
+,
+    {
+      "id": 4,
+      "name": "spider man",
+      "alterEgo": "peter parker"
+    }
