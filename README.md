@@ -1,2 +1,2 @@
 # my-react-query-tutorial
-this repo contains all the materials of my react query tutorial in Codevolution channel in youtube
+this repo contains all the materials of my react query tutorial in Codevolution channel in youtube: "https://www.youtube.com/watch?v=VtWkSCZX0Ec&list=PLC3y8-rFHvwjTELCrPrcZlo6blLBUspd2"
