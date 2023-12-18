@@ -14,6 +14,16 @@
       "id": 3,
       "name": "Wonder Woman",
       "alterEgo": "Princess Diana"
+    },
+    {
+      "name": "the flash",
+      "alterEgo": "barry allen",
+      "id": 4
+    },
+    {
+      "name": "shazam",
+      "alterEgo": "billy batson",
+      "id": 5
     }
   ],
   "friends": [
@@ -65,19 +75,19 @@
     },
     {
       "id": 5,
-      "label": "black"
-    },
-    {
-      "id": 6,
-      "label": "white"
-    },
-    {
-      "id": 7,
       "label": "orange"
     },
     {
-      "id": 8,
+      "id": 6,
       "label": "purple"
+    },
+    {
+      "id": 7,
+      "label": "black"
+    },
+    {
+      "id": 8,
+      "label": "white"
     }
   ]
 }

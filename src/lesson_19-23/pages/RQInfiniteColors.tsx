@@ -1,28 +1,30 @@
 import { Suspense } from 'react'
 import { ErrorBoundary } from 'react-error-boundary'
-import { useNavigate } from 'react-router-dom'
-import RQSuperHerosResult from '../components/RQSuperHerosResult'
-const RQSuperHeroes = () => {
-    const navigate = useNavigate()
+import RQInfiniteColorsResult from '../components/RQInfiniteColorsResult'
+
+const RQInfiniteColors = () => {
     return (
         <>
-            <h2>RQ Super Heros page</h2>
+            <h2>RQ Infinite Colors</h2>
             <ErrorBoundary
                 fallbackRender={() => (
                     <div>
                         There was an error!
                         <button type='button' onClick={() => {
-                            navigate('/')
+                            import("react-router-dom").then((module) => {
+                                const navigate = module.useNavigate()
+                                navigate("/")
+                            })
                         }}>back to home</button>
                     </div>
                 )}
             >
                 <Suspense fallback={<div>Loading...</div>}>
-                    <RQSuperHerosResult />
+                    <RQInfiniteColorsResult />
                 </Suspense>
             </ErrorBoundary>
         </>
     )
 }
 
-export default RQSuperHeroes
+export default RQInfiniteColors

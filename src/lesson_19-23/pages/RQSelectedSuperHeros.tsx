@@ -1,10 +1,8 @@
 import { Suspense } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
-import { useNavigate } from 'react-router-dom';
 import RQSuperHerosForm from '../components/RQSuperHerosForm';
 
 const RQSelectedSuperHeros = () => {
-    const navigate = useNavigate()
     return (
         <div>
             <h2>RQ Selected Super Heros page</h2>
@@ -13,7 +11,10 @@ const RQSelectedSuperHeros = () => {
                     <div>
                         There was an error!
                         <button type='button' onClick={() => {
-                            navigate('/')
+                            import("react-router-dom").then((module) => {
+                                const navigate = module.useNavigate()
+                                navigate("/")
+                            })
                         }}>back to home</button>
                     </div>
                 )}

@@ -1,5 +1,5 @@
 type superHero = {
-    id: number,
+    id?: number,
     name: string,
     alterEgo: string,
 };

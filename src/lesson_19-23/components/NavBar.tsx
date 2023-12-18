@@ -25,6 +25,9 @@ const NavBar = () => {
                 <li>
                     <Link to='/rq-paginated-color'>RQ Paginated Color</Link>
                 </li>
+                <li>
+                    <Link to='/rq-infinite-colors'>RQ Infinite Colors</Link>
+                </li >
             </ul>
         </nav>
     );

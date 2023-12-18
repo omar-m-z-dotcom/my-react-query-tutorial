@@ -32,7 +32,6 @@ const RQPaginatedColor = () => {
                     import('../components/RQPaginatedColorResult').then((module) => {
                         setDynamicComponent(() => module["default"]);
                     })
-                    console.log("rendering RQPaginatedColor");
                 }}>click me</button>
                 {DynamicComponent ? <DynamicComponent /> : null}
             </ErrorBoundary>
