@@ -29,7 +29,7 @@ const RQPaginatedColorResult = () => {
                 <div>
                     <button type="button" onClick={handlePrevPage} disabled={!links?.has("prev")}>Prev</button>
                     <button type="button" onClick={handleNextPage} disabled={!links?.has("next")}>Next</button>
-                    {isPlaceholderData && <div>placing a placeholder for now</div>}
+                    {isPlaceholderData && <div>placing a placeholder for now...</div>}
                     <ul>
                         {colors.map((color) => (
                             <li key={color.id}>{color.label}</li>

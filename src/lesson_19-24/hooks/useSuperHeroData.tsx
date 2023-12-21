@@ -17,6 +17,14 @@ const useSuperHeroData = (heroID: number) => {
         queryKey: ['superHeroes', heroID,],
         queryFn: fetchSuperHero,
         // queryFn: () => fetchSuperHero(heroID),
+        /*
+        initialData: TData | () => TData
+        - Optional
+        - If set, this value will be used as the initial data for the query cache (as long as the query hasn't been created or cached yet)
+        - If set to a function, the function will be called once during the shared/root query initialization, and be expected to synchronously return the initialData
+        - Initial data is considered stale by default unless a staleTime has been set
+        - initialData is persisted to the cache
+        */
         initialData: () => {
             const hero = queryClient.getQueryData<superHero[]>(['superHeroes'])?.find(hero => hero.id === heroID)
             if (hero) {

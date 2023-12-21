@@ -31,6 +31,13 @@ const useColorsData = (url: string = "http://localhost:3000/colors?_page=1&_limi
     return useQuery({
         queryKey: ["colors", url],
         queryFn: () => fetchColors(url),
+        /*
+        placeholderData: TData | (previousValue: TData | undefined; previousQuery: Query | undefined,) => TData
+        - Optional
+        - If set, this value will be used as the placeholder data for this particular query observer while the query is still in the pending state.
+        - placeholderData is not persisted to the cache.
+        - If you provide a function for placeholderData, as a first argument you will receive previously watched query data if available, and the second argument will be the complete previousQuery instance.
+        */
         placeholderData: (previousValue, previousQuery) => {
             if (previousValue) {
                 return previousValue

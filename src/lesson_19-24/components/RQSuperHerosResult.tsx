@@ -16,9 +16,9 @@ const RQSuperHerosResult = () => {
         const alterEgo = fomData.get('alterEgo')
         if (name && alterEgo) {
             heroMutation({ name: name.toString(), alterEgo: alterEgo.toString() })
-            if (heroPostError) {
-                throw heroPostError
-            }
+            // if (heroPostError) {
+            //     throw heroPostError
+            // }
         }
         else { console.log('no data') }
         e.currentTarget.reset()
@@ -33,6 +33,7 @@ const RQSuperHerosResult = () => {
                 <button type="submit">submit</button>
             </form>
             {isPending ? <div>adding hero...</div> : null}
+            {heroPostError ? <div>{heroPostError.message}</div> : null}
             {isFetching ? <div>checking for updates...</div> : null}
             {data.map(hero => {
                 return (
